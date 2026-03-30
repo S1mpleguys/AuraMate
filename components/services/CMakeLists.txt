@@ -1,0 +1,14 @@
+idf_component_register(
+    SRCS
+        "cloud_service.c"
+        "env_service.c"
+        "motion_service.c"
+        "service_manager.c"
+        "ui_service.c"
+        "voice_service.c"
+    INCLUDE_DIRS
+        "include"
+    REQUIRES
+        board
+        drivers
+)

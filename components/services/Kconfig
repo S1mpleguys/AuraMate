@@ -1,0 +1,40 @@
+menu "AuraMate Feature Flags"
+
+config AURAMATE_FEATURE_ENV
+    bool "Enable environment service"
+    default y
+    help
+        Reserve BME690 sampling and environment alert flow.
+
+config AURAMATE_FEATURE_MOTION
+    bool "Enable motion service"
+    default y
+    help
+        Reserve motion sampling and scoring flow.
+
+config AURAMATE_FEATURE_AUDIO
+    bool "Enable voice service"
+    default y
+    help
+        Reserve I2S capture, playback and wake-word flow.
+
+config AURAMATE_FEATURE_DISPLAY
+    bool "Enable display and lighting service"
+    default y
+    help
+        Reserve LCD pages and RGB breathing effect.
+
+config AURAMATE_FEATURE_CLOUD
+    bool "Enable cloud connectivity service"
+    default y
+    help
+        Reserve HTTP or MQTT integration for cloud services.
+
+config AURAMATE_FEATURE_BLE_EXT_NODES
+    bool "Enable BLE extension motion nodes"
+    default y
+    depends on AURAMATE_FEATURE_MOTION
+    help
+        Reserve BLE motion nodes for wrist and ankle sensors.
+
+endmenu

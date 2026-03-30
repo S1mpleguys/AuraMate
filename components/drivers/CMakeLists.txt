@@ -1,0 +1,12 @@
+idf_component_register(
+    SRCS
+        "audio_hal.c"
+        "device_registry.c"
+        "display_hal.c"
+        "light_hal.c"
+        "sensor_hub.c"
+    INCLUDE_DIRS
+        "include"
+    REQUIRES
+        board
+)
